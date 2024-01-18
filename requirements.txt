@@ -4,3 +4,4 @@ joblib
 Numpy
 Pandas
 scikit-learn
+nltk
