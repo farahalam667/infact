@@ -1,0 +1,20 @@
+<!-- input.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='input.css') }}">
+    <title>News Classifier</title>
+</head>
+<body>
+    <h1>Fact Checker AI</h1>
+    <form action="{{ url_for('classify') }}" method="post">
+        <label for="news_input">Enter a news article:</label>
+        <textarea id="news_input" name="news_input" rows="4" cols="50" required></textarea>
+        <br>
+        <button class="btn" type="submit">Submit</button>
+    </form>
+</body>
+</html>

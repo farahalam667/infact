@@ -1,0 +1,53 @@
+
+/* static/style.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #ee2698, #dd50b9, #c66cd2, #ad83e2, #9795e9, #83a4f3, #73b2f7, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    color: white; /* Set text color to contrast with the background */
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+form {
+    width: 80%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Add some transparency to make text readable */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+

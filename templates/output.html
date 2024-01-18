@@ -1,0 +1,18 @@
+<!-- templates/output.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+    <title>News Classifier - Result</title>
+</head>
+<body>
+    <div class="card">
+        <h1>News Classifier - Result</h1>
+        <p>{{ result }}</p>
+        <a href="{{ url_for('index') }}" class="neon-button">Back to Input</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,86 @@
+/* static/output.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to right, rgba(178, 66, 110, 0.5), rgba(171, 74, 127, 0.5), rgba(161, 82, 141, 0.5), rgba(148, 91, 154, 0.5), rgba(133, 100, 168, 0.5), rgba(119, 111, 183, 0.5), rgba(103, 122, 194, 0.5), rgba(84, 133, 200, 0.5), rgba(60, 148, 206, 0.5), rgba(45, 162, 205, 0.5), rgba(51, 175, 199, 0.5), rgba(77, 187, 189, 0.5));
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    background-image: linear-gradient(to right, #586a85, #437b8f, #3e8a89, #5c9576, #8a9b63);    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+h1 {
+    color: #fff; /* White text for better visibility on gradient background */
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #fff; /* White text for better visibility on gradient background */
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* White text for better visibility on gradient background */
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+/* For Button */
+
+.neon-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #00c6ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform transition */
+}
+
+.neon-button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #c2729f, #bb7ab0, #b182be, #a48bcb, #9594d5, #859fe0, #74aae8, #61b5ed, #49c4f2, #3ad2f1, #40dfeb, #5aebe1);
+    border-radius: 5px;
+    z-index: -1;
+    animation: neon-glow 1.5s infinite alternate;
+}
+
+@keyframes neon-glow {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.neon-button:hover {
+    text-decoration: none; /* Remove underline */
+    color: #ffffff;
+    background-color: #fff;
+    box-shadow: 0 0 10px 3px #5aebe1; /* Adjust the shadow as needed */
+    transform: scale(1.1); /* Added zoom effect */
+}
