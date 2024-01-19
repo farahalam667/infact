@@ -1,0 +1,52 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Fake News Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ url_for('about') }}">Fake News Classifier</a>
+    </nav>
+
+    <div class="container mt-5">
+        <h1>Welcome to the Fake News Classifier</h1>
+
+        <p>
+            Discover the truth behind news articles with our Fake News Classifier. This web application utilizes a machine learning model, specifically the Multinomial Naive Bayes algorithm, implemented in Python using the Scikit-learn library. The news articles are processed using Pandas DataFrames to facilitate efficient data manipulation.
+        </p>
+        <p class="disclaimer">
+            Disclaimer: This tool is designed for educational purposes only and should not be used as a sole determinant of the authenticity of news articles. While the algorithm is trained on a diverse dataset, it may not capture all nuances, and the results should be interpreted with caution.
+        </p>
+
+        <h2>Input Page:</h2>
+        <ul>
+            <li>
+                <p>
+                    Enter a news article in the text area below, and our system will leverage the power of Natural Language Processing (NLP) and machine learning to classify it as either fake or true. The backend Python code employs the Multinomial Naive Bayes algorithm, a popular choice for text classification tasks.
+                </p>
+            </li>
+            <li>
+                <p class="disclaimer">
+                    Disclaimer: The classification provided is based on patterns identified in the training data. It may not be foolproof, and the accuracy is subject to the quality and diversity of the training dataset. This tool should not be used as a substitute for critical thinking and fact-checking.
+                </p>
+            </li>
+        </ul>
+
+        <h2>Output Page:</h2>
+        <p>
+            The news has been classified! The backend Python code, backed by Scikit-learn, processes the input through a Multinomial Naive Bayes model trained on a dataset of labeled fake and true news articles. The result is a classification that provides insights into the reliability of the news content.
+        </p>
+        <p class="disclaimer">
+            Disclaimer: The classification is based on statistical analysis and may not be infallible. It is recommended to verify news from multiple sources and exercise critical thinking. This tool is not intended to replace human judgment or journalistic standards.
+        </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
