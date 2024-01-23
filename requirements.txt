@@ -5,3 +5,4 @@ Numpy
 Pandas
 scikit-learn
 nltk
+stopwords 
