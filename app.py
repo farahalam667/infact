@@ -9,6 +9,8 @@ import nltk
 from nltk.corpus import stopwords  # Add this line
 from nltk.tokenize import word_tokenize
 from flask import Flask, render_template, request
+nltk.download('stopwords')
+
 # Rest of your code...
     
 app = Flask(__name__, static_folder='static')
@@ -63,13 +65,17 @@ def input_page():
 def about():
     return render_template('about.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @app.route('/classify', methods=['POST'])
 def classify():
     user_input = request.form['news_input']
     user_input_processed = preprocess_text(user_input)
     user_input_tfidf = tfidf_vectorizer.transform([user_input_processed])
     prediction = model.predict(user_input_tfidf)[0]
-    
+
     result = "The news is classified as FAKE." if prediction == 0 else "The news is classified as TRUE."
     
     return render_template('output.html', result=result)
