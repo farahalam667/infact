@@ -10,7 +10,7 @@ from nltk.corpus import stopwords  # Add this line
 from nltk.tokenize import word_tokenize
 from flask import Flask, render_template, request
 # Rest of your code...
-
+    
 app = Flask(__name__, static_folder='static')
 
 # Assuming the files are in the same directory as your script
