@@ -1,13 +1,13 @@
+# app.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
 import nltk
-from http.server import SimpleHTTPRequestHandler
-from socketserver import TCPServer
-from flask import Flask, render_template, request
-
 nltk.download('punkt')
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+from flask import Flask, render_template, request
 nltk.download('stopwords')
 
 app = Flask(__name__, static_folder='static')
@@ -28,10 +28,10 @@ df_true['label'] = 1   # 1 for true news
 df = pd.concat([df_fake, df_true], ignore_index=True)
 
 # Data preprocessing
-stop_words = set(nltk.corpus.stopwords.words('english'))
+stop_words = set(stopwords.words('english'))
 
 def preprocess_text(text):
-    words = nltk.word_tokenize(text)
+    words = word_tokenize(text)
     words = [word.lower() for word in words if word.isalpha() and word.lower() not in stop_words]
     return ' '.join(words)
 
@@ -75,12 +75,4 @@ def classify():
     return render_template('output.html', result=result)
 
 if __name__ == '__main__':
-    # Set the download directory to your specific folder within your home directory
-    download_folder = nltk.data.path[0]  # Get the NLTK data directory
-    port = 8080  # Change this to the desired port
-
-    # Create a simple HTTP server
-    handler = SimpleHTTPRequestHandler
-    with TCPServer(("", port), handler) as httpd:
-        print(f"Serving on port {port}")
-        httpd.serve_forever()
+    app.run(debug=True)

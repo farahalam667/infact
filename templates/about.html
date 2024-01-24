@@ -59,9 +59,35 @@
                         </div>
             </div>
                 <div class="text">
-                    <p><img class="inset" src="{{ url_for('static', filename='images/brainware-logo.png') }}" alt="" />Trees are woody perennial plants that are a member of the kingdom <em>Plantae</em>. All species of trees are grouped by their genus, family, and order. This helps make identifying and studying trees easier.</p>
-                    <p>Apart from providing oxygen for the planet and beauty when they bloom or turn color, trees are very useful. Certain species of hardwood and softwood trees are excellent for timber, making furniture, and paper.</p>
-                    <p>When managed properly, trees are a good source of renewable energy and construction material.</p>
+                    <img class="inset" src="{{ url_for('static', filename='images/brainware-logo.png') }}" alt="" />
+                    <p>
+                        As a developer, I've crafted a versatile web app combining data preparation, machine learning, and a user-friendly Flask interface. Here's the breakdown:
+                      </p>
+                      
+                      <p>
+                        <strong>Data Prep:</strong> Employed pandas to merge CSV files (Fake.csv and True.csv) into a DataFrame, assigning labels (0 for fake, 1 for true). Leveraged NLTK for text preprocessing, including tokenization, lowercase conversion, and stopwords removal.
+                      </p>
+                      
+                      <p>
+                        <strong>ML Model:</strong> Split dataset, using TfidfVectorizer for text-to-number conversion, and trained a Multinomial Naive Bayes model on transformed data.
+                      </p>
+                      
+                      <p>
+                        <strong>Flask Web App:</strong> Established routes for main, input, about, and contact pages. Implemented classification for user input (/classify).
+                      </p>
+                      
+                      <p>
+                        <strong>Work Section:</strong> Added potential for project showcase with a new route (/work) and template (work.html).
+                      </p>
+                      
+                      <p>
+                        <strong>Web Server:</strong> Ran Flask on a simple HTTP server, dynamically obtained NLTK data directory, and set up listening on port 8080.
+                      </p>
+                      
+                      <p>
+                        A versatile app uniting data science and web development, providing a seamless news classification interface and room for project showcase.
+                      </p>
+                      
                 </div>
         </div>
         
