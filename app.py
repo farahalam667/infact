@@ -1,18 +1,14 @@
-
 # app.py
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import nltk
-from nltk.corpus import stopwords  # Add this line
+from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from flask import Flask, render_template, request
 nltk.download('stopwords')
 
-# Rest of your code...
-    
 app = Flask(__name__, static_folder='static')
 
 # Assuming the files are in the same directory as your script
@@ -31,9 +27,6 @@ df_true['label'] = 1   # 1 for true news
 df = pd.concat([df_fake, df_true], ignore_index=True)
 
 # Data preprocessing
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-
 stop_words = set(stopwords.words('english'))
 
 def preprocess_text(text):
